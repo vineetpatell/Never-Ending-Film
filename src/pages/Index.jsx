@@ -22,10 +22,10 @@ import bts12 from '@/assets/bts-12.png';
 // Import Movie images for hero carousel
 import movieTrial from '@/assets/Trialkajol.png';
 import moviePS1 from '@/assets/PS-1.png';
-import movieKhufiya from '@/assets/khufiya.png';
+import movieKhufiya from '@/assets/Khufiya.png';
 import movieClass83 from '@/assets/Classof83.png';
 import movieToothPari from '@/assets/Toothpari.png';
-import movieCharlieChopra from '@/assets/charliechopra.png';
+import movieCharlieChopra from '@/assets/Charliechopra.png';
 import moviePS2 from '@/assets/PS-2.png';
 import movieAranyak from '@/assets/Aranyak.png';
 import movieLaalSingh from '@/assets/Laalsinghchadda.png';
