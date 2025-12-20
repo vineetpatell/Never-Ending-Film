@@ -47,7 +47,8 @@ const About = () => {
       role: "Editor/Director",
       bio: "I'm a film editor with over a decade of hands-on experience in the industry—and recently, I've stepped behind the camera to direct my first feature film, Well Done C.A. Sahab!. Well Done C.A. Sahab!—the first Hindi feature ever made on the subject of Chartered Accountancy—marks a significant milestone in my career. The film has already made waves on the festival circuit: it was nominated at the Jaipur International Film Festival 2025, selected for the 15th Dada Saheb Phalke Film Festival, and earned me the Best Debut Filmmaker award at the Golden Lion International Film Festival 2025. Theatrical release is on the horizon, and I'm excited for audiences to experience it soon.",
       image: sarveshImage,
-      imdbUrl: "https://www.imdb.com/"
+      imdbUrl: "https://www.imdb.com/name/nm6140618/?ref_=ext_shr_lnk"
+      
     },
     {
       id: "kundan",
@@ -55,7 +56,7 @@ const About = () => {
       role: "Writer | Lyricist",
       bio: "Kundan Vidyarthi is a writer and lyricist working in the Hindi film industry, known for his evocative storytelling and soulful lyrics. Over the past few years, he has collaborated with notable music composers like Pravesh Mallik, Rishi Dutta, and Adhir Dutta, lending his lyrical voice to films and web series that connect deeply with audiences. His recent work includes songs for 'Dhak Dhak' (2 songs), 'Sandeep Bhaiya', 'College Romance', 'Matto Ki Saikal' (2 songs, starring Prakash Jha), and 'Runaway Lugaai' (3 songs, starring Sanjai Mishra). As a screenwriter, he continues to explore fresh, grounded narratives—his short film 'Papa aur Smart Phone', featuring Sanjai Mishra, is currently being screened at film festivals. With multiple films in production, Kundan's journey as a storyteller is one marked by depth, emotion, and an unfiltered connection to the world around him.",
       image: kundanImage,
-      imdbUrl: "https://www.imdb.com/"
+      imdbUrl: "https://www.imdb.com/name/nm11786731/?ref_=ext_shr_lnk"
     },
     {
       id: "aditya",

@@ -4,7 +4,7 @@ export const projects = [
     title: 'Khufiya',
     tagline: 'A gripping espionage thriller',
     category: 'Feature Films',
-    image: 'https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&h=600&fit=crop',
+    image: '',
     description: 'Post-production work for this critically acclaimed espionage thriller featuring intricate storytelling and compelling performances.',
     year: '2023',
     platform: 'Netflix',
