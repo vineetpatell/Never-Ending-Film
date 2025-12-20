@@ -189,7 +189,7 @@ const About = () => {
                         Karan Patel
                       </h3>
                       <Badge variant="secondary" className="text-lg px-4 py-2">
-                        Founder & Managing Director, Never Ending Films
+                        Founder & Managing Director
                       </Badge>
                     </div>
                     

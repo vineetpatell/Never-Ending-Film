@@ -224,7 +224,6 @@ const BTS = () => {
         {/* Hero Section */}
         <section className="relative py-20 film-grain">
           <div className="absolute inset-0 bg-gradient-hero" />
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-10" />
           
           <div className="relative z-10 container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow animate-fade-in">

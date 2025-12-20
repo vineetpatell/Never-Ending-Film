@@ -89,13 +89,13 @@ const Contact = () => {
                   </a>
                   
                   <a
-                    href="tel:+919999999999"
+                    href="tel:+919819143277"
                     className="flex items-center space-x-4 p-4 glass-panel rounded-lg hover:bg-glass/30 transition-colors group cursor-pointer"
                   >
                     <Phone className="text-primary group-hover:scale-110 transition-transform" size={24} />
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-foreground-muted">+91 XXXXX XXXXX</p>
+                      <p className="text-foreground-muted">+91 98191 43277</p>
                     </div>
                   </a>
                   
@@ -161,7 +161,7 @@ const Contact = () => {
               
               <div className="flex justify-center space-x-6">
                 <a
-                  href="https://www.imdb.com"
+                  href="https://www.imdb.com/name/nm15358713/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 glass-panel rounded-full hover:bg-glass/30 transition-colors group"
@@ -172,7 +172,7 @@ const Contact = () => {
                 </a>
                 
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/never_ending_films?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 glass-panel rounded-full hover:bg-glass/30 transition-colors group"
@@ -181,7 +181,7 @@ const Contact = () => {
                 </a>
                 
                 <a
-                  href="https://www.youtube.com"
+                  href="https://www.youtube.com/@NeverEnding_Films"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 glass-panel rounded-full hover:bg-glass/30 transition-colors group"
@@ -190,7 +190,7 @@ const Contact = () => {
                 </a>
                 
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/company/never-ending-films/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 glass-panel rounded-full hover:bg-glass/30 transition-colors group"

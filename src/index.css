@@ -22,15 +22,15 @@
     --glass-border: 0 0% 25%;
 
     /* Never Ending Films Brand Colors */
-    --brand-red: 342 100% 64%;        /* #ff0048 - bright red */
-    --brand-neon: 342 100% 70%;       /* #ff3366 - neon red */
-    --brand-glow: 342 100% 76%;       /* #ff6699 - light glow red */
-    --brand-shadow: 342 100% 35%;     /* #b3002d - dark red shadow */
+    --brand-red: 0 85% 55%;        /* Softer red - eye-catching */
+    --brand-neon: 0 90% 60%;       /* Vibrant but balanced */
+    --brand-glow: 0 85% 65%;       /* Soft glow red */
+    --brand-shadow: 0 80% 35%;     /* Dark red shadow */
 
     /* Primary System */
-    --primary: 342 100% 64%;
+    --primary: 0 85% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 342 100% 76%;
+    --primary-glow: 0 85% 65%;
 
     /* Secondary System */
     --secondary: 220 13% 15%;
@@ -54,16 +54,16 @@
     --ring: 0 84% 60%;
 
     /* Gradients */
-    --gradient-brand: linear-gradient(135deg, hsl(342 100% 64%), hsl(342 100% 76%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 13% 6%) 0%, hsl(220 13% 10%) 50%, hsl(342 100% 64% / 0.05) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(342 100% 76% / 0.3) 0%, transparent 70%);
+    --gradient-brand: linear-gradient(135deg, hsl(0 85% 55%), hsl(0 90% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 13% 6%) 0%, hsl(220 13% 10%) 50%, hsl(0 85% 55% / 0.08) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(0 85% 65% / 0.4) 0%, transparent 70%);
     --gradient-glass: linear-gradient(135deg, hsla(220 13% 15% / 0.3), hsla(220 13% 25% / 0.1));
 
     /* Shadows & Glows */
-    --shadow-brand: 0 0 40px hsl(342 100% 76% / 0.4);
-    --shadow-logo: 0 0 60px hsl(342 100% 64% / 0.6);
+    --shadow-brand: 0 0 50px hsl(0 85% 65% / 0.5);
+    --shadow-logo: 0 0 70px hsl(0 85% 55% / 0.7);
     --shadow-glass: 0 8px 32px hsla(220 13% 8% / 0.4);
-    --glow-brand: 0 0 30px hsl(342 100% 76% / 0.8);
+    --glow-brand: 0 0 40px hsl(0 85% 65% / 0.9);
 
     --radius: 0.75rem;
 
@@ -134,22 +134,7 @@
     position: relative;
   }
 
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/watermark-logo.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: 60% auto;
-    opacity: 0.1;
-    z-index: 0;
-    pointer-events: none;
-  }
+  /* Background logo removed */
 
   #root {
     position: relative;
@@ -176,7 +161,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, hsl(342 100% 76% / 0.2), transparent);
+    background: linear-gradient(90deg, transparent, hsl(0 85% 65% / 0.3), transparent);
     transition: left 0.6s ease;
   }
 
@@ -206,8 +191,8 @@
   }
 
   .glass-panel:hover {
-    border-color: hsl(342 100% 64% / 0.5);
-    box-shadow: 0 0 20px hsl(342 100% 64% / 0.3), 0 0 40px hsl(342 100% 64% / 0.1);
+    border-color: hsl(0 85% 55% / 0.6);
+    box-shadow: 0 0 25px hsl(0 85% 55% / 0.4), 0 0 50px hsl(0 85% 55% / 0.15);
     transform: scale(1.02);
   }
 
@@ -223,43 +208,56 @@
   }
 
   .cinema-card:hover {
-    border-color: hsl(342 100% 64% / 0.5);
-    box-shadow: 0 0 20px hsl(342 100% 64% / 0.3), 0 0 40px hsl(342 100% 64% / 0.1);
+    border-color: hsl(0 85% 55% / 0.6);
+    box-shadow: 0 0 25px hsl(0 85% 55% / 0.4), 0 0 50px hsl(0 85% 55% / 0.15);
     transform: scale(1.05);
   }
 
   /* Text Glow Effect */
   .text-glow {
-    text-shadow: 0 0 30px hsl(var(--primary-glow) / 0.8), 0 0 60px hsl(var(--primary-glow) / 0.4);
+    /* Glow effect removed */
   }
 
   /* Logo Glow Animation */
   .logo-glow {
-    filter: drop-shadow(0 0 20px hsl(342 100% 76% / 0.6)) 
-            drop-shadow(0 0 40px hsl(342 100% 64% / 0.4))
-            drop-shadow(0 0 80px hsl(342 100% 64% / 0.2));
+    filter: drop-shadow(0 0 25px hsl(0 85% 65% / 0.7)) 
+            drop-shadow(0 0 50px hsl(0 85% 55% / 0.5))
+            drop-shadow(0 0 100px hsl(0 85% 55% / 0.25));
     animation: logo-pulse 3s ease-in-out infinite;
   }
 
   @keyframes logo-pulse {
     0%, 100% { 
-      filter: drop-shadow(0 0 20px hsl(342 100% 76% / 0.6)) 
-              drop-shadow(0 0 40px hsl(342 100% 64% / 0.4))
-              drop-shadow(0 0 80px hsl(342 100% 64% / 0.2));
+      filter: drop-shadow(0 0 25px hsl(0 85% 65% / 0.7)) 
+              drop-shadow(0 0 50px hsl(0 85% 55% / 0.5))
+              drop-shadow(0 0 100px hsl(0 85% 55% / 0.25));
     }
     50% { 
-      filter: drop-shadow(0 0 30px hsl(342 100% 76% / 0.8)) 
-              drop-shadow(0 0 60px hsl(342 100% 64% / 0.6))
-              drop-shadow(0 0 120px hsl(342 100% 64% / 0.3));
+      filter: drop-shadow(0 0 35px hsl(0 85% 65% / 0.9)) 
+              drop-shadow(0 0 70px hsl(0 85% 55% / 0.7))
+              drop-shadow(0 0 140px hsl(0 85% 55% / 0.4));
     }
+  }
+
+  /* Professional Tagline Font */
+  .tagline-font {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
   }
 
   /* Typewriter Effect */
   .typewriter-text {
     overflow: hidden;
-    border-right: 2px solid hsl(342 100% 76%);
+    border-right: 2px solid hsl(0 85% 65%);
     white-space: nowrap;
     animation: typing 4s steps(60, end), blink-caret 1s step-end infinite;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.02em;
   }
 
   @keyframes typing {
@@ -269,7 +267,7 @@
 
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: hsl(342 100% 76%) }
+    50% { border-color: hsl(0 85% 65%) }
   }
 
 
@@ -332,7 +330,7 @@
   }
 
   .animate-scroll-left {
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 15s linear infinite;
   }
 
   .animate-scroll-left:hover {

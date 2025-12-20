@@ -40,10 +40,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="text-2xl font-bold text-glow transition-all duration-300 group-hover:scale-105">
-              <span className="text-primary">Never Ending</span>
-              <span className="text-foreground"> Films</span>
-            </div>
+            <img 
+              src="/lovable-uploads/2ea26820-4524-4553-b45d-e2a6545d0ba5.png" 
+              alt="Never Ending Films Logo" 
+              className="h-24 md:h-28 lg:h-32 transition-all duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}

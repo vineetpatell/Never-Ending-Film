@@ -40,7 +40,7 @@ const BTSCarousel = () => {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % btsImages.length);
-    }, 5000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [isPlaying, btsImages.length]);

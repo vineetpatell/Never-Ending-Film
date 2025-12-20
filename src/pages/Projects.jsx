@@ -68,7 +68,6 @@ const Projects = () => {
         <section className="relative py-20 film-grain">
           <div className="absolute inset-0 bg-gradient-hero" />
           <VFXParticles className="opacity-30" particleCount={40} speed={0.6} />
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-10" />
           
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.h1 
@@ -201,7 +200,7 @@ const Projects = () => {
                 Explore our founder's professional journey and filmography on IMDB, showcasing years of experience in the film and media industry with major productions.
               </p>
               <a 
-                href="https://www.imdb.com/name/nm15446937/"
+                href="https://www.imdb.com/name/nm15358713/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

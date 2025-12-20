@@ -35,15 +35,6 @@ const HeroSection = () => {
       {/* Background with VFX */}
       <div className="absolute inset-0 bg-gradient-hero" />
       
-      {/* Logo Background */}
-      <div 
-        className="absolute inset-0 bg-center bg-no-repeat opacity-10 blur-sm"
-        style={{
-          backgroundImage: 'url(/lovable-uploads/2ea26820-4524-4553-b45d-e2a6545d0ba5.png)',
-          backgroundSize: '60%'
-        }}
-      />
-      
       {/* Animated VFX Elements */}
       <div className="absolute inset-0">
         {/* Main glow in center */}
@@ -78,7 +69,7 @@ const HeroSection = () => {
 
         {/* Typewriter Tagline */}
         <div className="mb-16">
-          <p className={`text-lg md:text-xl lg:text-2xl text-foreground-muted leading-relaxed max-w-3xl mx-auto ${
+          <p className={`text-lg md:text-xl lg:text-2xl text-foreground-muted leading-relaxed max-w-3xl mx-auto tagline-font ${
             isTypewriterRevealed ? 'typewriter-text' : 'opacity-0'
           }`}>
             You believe in us. We believe in you. Together, we create magic.

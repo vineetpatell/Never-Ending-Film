@@ -66,11 +66,11 @@ const Footer = () => {
                 karan@neverendingfilms.in
               </a>
               <a 
-                href="tel:+919876543210"
+                href="tel:+919819143277"
                 className="flex items-center text-foreground-muted hover:text-primary transition-colors text-sm group"
               >
                 <Phone className="w-4 h-4 mr-3 text-primary group-hover:scale-110 transition-transform" />
-                +91 98765 43210
+                +91 98191 43277
               </a>
               <p className="text-sm text-foreground-muted italic mt-4">
                 Drop by for chai & coffee — Let's create something amazing.
@@ -82,7 +82,7 @@ const Footer = () => {
               <h5 className="text-sm font-semibold mb-4 text-foreground">Follow Us</h5>
               <div className="flex space-x-4">
                 <a 
-                  href="https://www.imdb.com/" 
+                  href="https://www.imdb.com/name/nm15358713/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-foreground-muted hover:text-primary transition-colors group"
@@ -92,7 +92,7 @@ const Footer = () => {
                   </div>
                 </a>
                 <a 
-                  href="https://www.instagram.com/" 
+                  href="https://www.instagram.com/never_ending_films?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-foreground-muted hover:text-primary transition-colors group"
@@ -102,7 +102,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://www.linkedin.com/" 
+                  href="https://www.linkedin.com/company/never-ending-films/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-foreground-muted hover:text-primary transition-colors group"
@@ -112,7 +112,7 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://www.youtube.com/" 
+                  href="https://www.youtube.com/@NeverEnding_Films" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-foreground-muted hover:text-primary transition-colors group"

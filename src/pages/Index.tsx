@@ -177,7 +177,7 @@ const Index = () => {
               style={{ y: textY, opacity: textOpacity }}
               className="mb-12"
             >
-              <div className="typewriter text-xl md:text-2xl lg:text-3xl text-foreground-muted font-light mb-8 max-w-4xl mx-auto">
+              <div className="typewriter text-xl md:text-2xl lg:text-3xl text-foreground-muted mb-8 max-w-4xl mx-auto tagline-font">
                 "You believe in us. We believe in you. Together, we create magic."
               </div>
             </motion.div>
