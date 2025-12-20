@@ -18,15 +18,15 @@ const Projects = () => {
     ? projects 
     : projects.filter(project => project.category === filter);
 
-  const lightboxImages = projects.map(project => ({
-    src: '/placeholder-image.jpg',
+  const lightboxImages = filteredProjects.map(project => ({
+    src: project.image || '/placeholder.svg',
     alt: project.title,
     title: project.title,
     description: `${project.tagline} (${project.year})`
   }));
 
   const openLightbox = (projectId: string) => {
-    const index = projects.findIndex(p => p.id === projectId);
+    const index = filteredProjects.findIndex(p => p.id === projectId);
     setCurrentImageIndex(index);
     setLightboxOpen(true);
   };
@@ -122,16 +122,11 @@ const Projects = () => {
                 >
                   <Card className="cinema-card overflow-hidden">
                     <div className="relative">
-                      <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-16 h-16 mx-auto mb-3 border-4 border-dashed border-gray-600 rounded-lg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                          </div>
-                          <p className="text-gray-500 text-sm">Image Placeholder</p>
-                        </div>
-                      </div>
+                      <img
+                        src={project.image || '/placeholder.svg'}
+                        alt={project.title}
+                        className="w-full h-64 object-cover"
+                      />
                       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <div className="text-center">
                           <p className="text-white text-sm mb-2">Click to view details</p>

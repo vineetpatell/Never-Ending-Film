@@ -6,38 +6,15 @@ import { Button } from '@/components/ui/button';
 import PageTransition from '@/components/PageTransition';
 import SEOHead from '@/components/SEOHead';
 import VFXParticles from '@/components/VFXParticles';
-import LightboxGallery from '@/components/LightboxGallery';
 import { projects, categories } from '@/data/projects';
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const filteredProjects = filter === 'All' 
     ? projects 
     : projects.filter(project => project.category === filter);
 
-  const lightboxImages = projects.map(project => ({
-    src: '/placeholder-image.jpg',
-    alt: project.title,
-    title: project.title,
-    description: `${project.tagline} (${project.year})`
-  }));
-
-  const openLightbox = (projectId) => {
-    const index = projects.findIndex(p => p.id === projectId);
-    setCurrentImageIndex(index);
-    setLightboxOpen(true);
-  };
-
-  const handleNext = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % lightboxImages.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length);
-  };
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -89,23 +66,7 @@ const Projects = () => {
           </div>
         </section>
 
-        {/* Filter Section */}
-        <section className="py-8 bg-background-secondary">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={filter === category ? "default" : "outline"}
-                  className={filter === category ? "btn-cinema" : "btn-outline-cinema"}
-                  onClick={() => setFilter(category)}
-                >
-                  {category}
-                </Button>
-              ))}
-            </div>
-          </div>
-        </section>
+        
 
         {/* Projects Grid */}
         <section className="py-20">
@@ -117,28 +78,19 @@ const Projects = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group cursor-pointer"
-                  onClick={() => openLightbox(project.id)}
+                  className="group"
                 >
                   <Card className="cinema-card overflow-hidden">
                     <div className="relative">
-                      <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-16 h-16 mx-auto mb-3 border-4 border-dashed border-gray-600 rounded-lg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                          </div>
-                          <p className="text-gray-500 text-sm">Image Placeholder</p>
-                        </div>
-                      </div>
-                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div className="text-center">
-                          <p className="text-white text-sm mb-2">Click to view details</p>
-                          <Badge variant="secondary" className="bg-primary/20 text-primary">
-                            {project.category}
-                          </Badge>
-                        </div>
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <Badge variant="secondary" className="bg-primary/20 text-primary">
+                          {project.category}
+                        </Badge>
                       </div>
                       {project.platform && (
                         <div className="absolute top-4 right-4">
@@ -215,15 +167,7 @@ const Projects = () => {
           </div>
         </section>
 
-        {/* Lightbox Gallery */}
-        <LightboxGallery
-          images={lightboxImages}
-          isOpen={lightboxOpen}
-          currentIndex={currentImageIndex}
-          onClose={() => setLightboxOpen(false)}
-          onNext={handleNext}
-          onPrev={handlePrev}
-        />
+      
       </div>
     </PageTransition>
   );
