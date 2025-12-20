@@ -23,7 +23,7 @@ import bts12 from '@/assets/bts-12.png';
 import movieTrial from '@/assets/Trialkajol.png';
 import moviePS1 from '@/assets/PS-1.png';
 import movieKhufiya from '@/assets/khufiya.png';
-import movieClass83 from '@/assets/Cassof83.png';
+import movieClass83 from '@/assets/Classof83.png';
 import movieToothPari from '@/assets/Toothpari.png';
 import movieCharlieChopra from '@/assets/charliechopra.png';
 import moviePS2 from '@/assets/PS-2.png';
