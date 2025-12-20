@@ -19,6 +19,18 @@ import bts10 from '@/assets/bts-10.png';
 import bts11 from '@/assets/bts-11.png';
 import bts12 from '@/assets/bts-12.png';
 
+// Import Movie images for hero carousel
+import movieTrial from '@/assets/Trialkajol.png';
+import moviePS1 from '@/assets/PS-1.png';
+import movieKhufiya from '@/assets/khufiya.png';
+import movieClass83 from '@/assets/classof83.png';
+import movieToothPari from '@/assets/Toothpari.png';
+import movieCharlieChopra from '@/assets/charliechopra.png';
+import moviePS2 from '@/assets/PS-2.png';
+import movieAranyak from '@/assets/Aranyak.png';
+import movieLaalSingh from '@/assets/Laalsinghchadda.png';
+
+
 const Index = () => {
   const [logoVisible, setLogoVisible] = useState(false);
 
@@ -110,22 +122,40 @@ const Index = () => {
           <VFXParticles className="opacity-30" particleCount={30} speed={0.5} />
           
           <div className="relative z-10 container mx-auto px-4 text-center py-20">
-            {/* Logo Animation with VFX */}
+                      {/* Movie Carousel above title */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotateY: 180 }}
-              animate={logoVisible ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              className="mb-12"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="mb-12 relative overflow-hidden"
             >
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/2ea26820-4524-4553-b45d-e2a6545d0ba5.png" 
-                  alt="Never Ending Films Logo"
-                  className="mx-auto h-32 md:h-48 w-auto filter drop-shadow-2xl"
-                  style={{
-                    filter: 'drop-shadow(0 0 30px hsl(var(--primary-glow) / 0.7)) drop-shadow(0 0 60px hsl(var(--primary-glow) / 0.3))'
-                  }}
-                />
+              <div className="flex animate-scroll-left space-x-4">
+                {/* First set of movie images */}
+                {[movieTrial, moviePS1, movieKhufiya, movieClass83, movieToothPari, movieCharlieChopra, moviePS2, movieAranyak, movieLaalSingh].map((src, index) => (
+                  <div key={`movie-first-${index}`} className="flex-shrink-0">
+                    <div className="relative overflow-hidden rounded-lg w-40 h-56 md:w-48 md:h-64 cinema-card">
+                      <img
+                        src={src}
+                        alt="Featured Movie"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    </div>
+                  </div>
+                ))}
+                {/* Duplicate set for continuous scroll */}
+                {[movieTrial, moviePS1, movieKhufiya, movieClass83, movieToothPari, movieCharlieChopra, moviePS2, movieAranyak, movieLaalSingh].map((src, index) => (
+                  <div key={`movie-second-${index}`} className="flex-shrink-0">
+                    <div className="relative overflow-hidden rounded-lg w-40 h-56 md:w-48 md:h-64 cinema-card">
+                      <img
+                        src={src}
+                        alt="Featured Movie"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    </div>
+                  </div>
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-pulse" />
               </div>
             </motion.div>

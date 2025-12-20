@@ -132,6 +132,7 @@
     @apply bg-background text-foreground font-sans antialiased;
     background: var(--gradient-hero);
     position: relative;
+    overflow-x: hidden;
   }
 
   /* Background logo removed */
