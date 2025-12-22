@@ -133,7 +133,7 @@ const Index = () => {
                 {/* First set of movie images */}
                 {[movieTrial, moviePS1, movieKhufiya, movieClass83, movieToothPari, movieCharlieChopra, moviePS2, movieAranyak, movieLaalSingh].map((src, index) => (
                   <div key={`movie-first-${index}`} className="flex-shrink-0">
-                    <div className="relative overflow-hidden rounded-lg w-40 h-56 md:w-48 md:h-64 cinema-card">
+                     <div className="relative overflow-hidden rounded-xl w-56 h-80 md:w-72 md:h-96 cinema-card">
                       <img
                         src={src}
                         alt="Featured Movie"
@@ -146,7 +146,7 @@ const Index = () => {
                 {/* Duplicate set for continuous scroll */}
                 {[movieTrial, moviePS1, movieKhufiya, movieClass83, movieToothPari, movieCharlieChopra, moviePS2, movieAranyak, movieLaalSingh].map((src, index) => (
                   <div key={`movie-second-${index}`} className="flex-shrink-0">
-                    <div className="relative overflow-hidden rounded-lg w-40 h-56 md:w-48 md:h-64 cinema-card">
+                      <div className="relative overflow-hidden rounded-xl w-56 h-80 md:w-72 md:h-96 cinema-card">
                       <img
                         src={src}
                         alt="Featured Movie"
