@@ -30,7 +30,7 @@ const ServiceDetail = () => {
         'Sound Design & Color Grading',
         'Final Delivery & Distribution'
       ],
-      heroImage: '/placeholder.svg'
+      heroImage: 'https://i.pinimg.com/736x/4d/8c/23/4d8c231e166c721f990adec3a56ece22.jpg'
     },
     'web-series': {
       title: 'Web Series & OTT Content',
@@ -52,7 +52,7 @@ const ServiceDetail = () => {
         'Post-Production Pipeline',
         'Platform Delivery & Marketing'
       ],
-      heroImage: '/placeholder.svg'
+      heroImage: 'https://i.pinimg.com/1200x/37/e2/a3/37e2a3ca7ecb16613e3c42cb6c0ece34.jpg'
     },
     'commercials': {
       title: 'Commercial Films',
@@ -74,7 +74,29 @@ const ServiceDetail = () => {
         'Multi-Format Delivery',
         'Campaign Launch & Analytics'
       ],
-      heroImage: '/placeholder.svg'
+      heroImage: 'https://i.pinimg.com/1200x/3f/0b/c1/3f0bc19868b2f6fb8979d57437e115e8.jpg'
+    },
+       'commercial-films': {
+      title: 'Commercial Films',
+      subtitle: 'Luxury brand campaigns that drive results',
+      description: 'Our commercial production services help brands tell their stories in the most compelling way possible. We combine creative excellence with strategic thinking to create advertisements that not only look stunning but also drive measurable business results.',
+      features: [
+        'Brand strategy and concept development',
+        'High-end commercial production',
+        'Celebrity and talent management',
+        'Multi-format delivery (TV, digital, social)',
+        'Campaign performance tracking',
+        'International market adaptation'
+      ],
+      process: [
+        'Brand Strategy & Creative Concept',
+        'Pre-Production & Talent Booking',
+        'Commercial Filming',
+        'Post-Production & VFX',
+        'Multi-Format Delivery',
+        'Campaign Launch & Analytics'
+      ],
+      heroImage: 'https://i.pinimg.com/1200x/3f/0b/c1/3f0bc19868b2f6fb8979d57437e115e8.jpg'
     },
     'music-videos': {
       title: 'Music Videos',
@@ -96,7 +118,7 @@ const ServiceDetail = () => {
         'Color Grading & Sound Sync',
         'Final Delivery & Promotion'
       ],
-      heroImage: '/placeholder.svg'
+      heroImage: 'https://i.pinimg.com/1200x/1c/05/00/1c050018567a887c49c66da7e8dc11af.jpg'
     },
     'digital-ads': {
       title: 'Digital Advertisements',
@@ -118,7 +140,7 @@ const ServiceDetail = () => {
         'Performance Tracking',
         'Campaign Optimization'
       ],
-      heroImage: '/placeholder.svg'
+      heroImage: 'https://i.pinimg.com/1200x/f8/4c/15/f84c15f0c7b514f30385842def32ecf5.jpg'
     },
     'documentaries': {
       title: 'Documentaries',
@@ -140,7 +162,7 @@ const ServiceDetail = () => {
         'Fact-Checking & Verification',
         'Distribution & Impact Campaign'
       ],
-      heroImage: '/placeholder.svg'
+      heroImage: 'https://i.pinimg.com/736x/7b/11/7e/7b117e7f1d0f075477e4c1a5410f9e42.jpg'
     }
   };
 
@@ -211,7 +233,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* Hero Image */}
-        <section className="px-4 -mt-10">
+        <section className="px-10 -mt-10 mb-20 relative z-10">
           <div className="container mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -219,6 +241,7 @@ const ServiceDetail = () => {
               transition={{ duration: 0.8 }}
               className="aspect-video bg-gradient-cinema rounded-lg overflow-hidden"
             >
+              
               <img 
                 src={service.heroImage} 
                 alt={service.title}

@@ -76,6 +76,28 @@ const ServiceDetail = () => {
       ],
       heroImage: '/placeholder.svg'
     },
+       'commercial-films': {
+      title: 'Commercial Films',
+      subtitle: 'Luxury brand campaigns that drive results',
+      description: 'Our commercial production services help brands tell their stories in the most compelling way possible. We combine creative excellence with strategic thinking to create advertisements that not only look stunning but also drive measurable business results.',
+      features: [
+        'Brand strategy and concept development',
+        'High-end commercial production',
+        'Celebrity and talent management',
+        'Multi-format delivery (TV, digital, social)',
+        'Campaign performance tracking',
+        'International market adaptation'
+      ],
+      process: [
+        'Brand Strategy & Creative Concept',
+        'Pre-Production & Talent Booking',
+        'Commercial Filming',
+        'Post-Production & VFX',
+        'Multi-Format Delivery',
+        'Campaign Launch & Analytics'
+      ],
+      heroImage: '/placeholder.svg'
+    },
     'music-videos': {
       title: 'Music Videos',
       subtitle: 'Visual poetry that complements musical artistry',
