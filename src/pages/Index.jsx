@@ -167,7 +167,7 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-glow"
             >
-              <span className="text-primary">Never Ending</span>
+              <span className="text-primary">Neverr Ending</span>
               <span className="text-foreground"> Films</span>
             </motion.h1>
 
