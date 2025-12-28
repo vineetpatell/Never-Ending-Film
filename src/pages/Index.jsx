@@ -342,7 +342,7 @@ const Index = () => {
               className="border-t border-b border-border/30 py-12 text-center"
             >
               <p className="text-2xl md:text-3xl font-light text-foreground-muted italic max-w-4xl mx-auto">
-                "(I hope you're good enough to get what I can't say)"
+                I hope you're good enough to get what I can't say
               </p>
             </motion.div>
           </div>
