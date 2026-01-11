@@ -373,7 +373,7 @@ const Index = () => {
                   <Card className="glass-panel h-full">
                     <CardContent className="p-8">
                       <p className="text-lg text-foreground-muted mb-6 italic leading-relaxed">
-                        "{testimonial.text}"
+                        {testimonial.text}
                       </p>
                       <div className="border-t border-border/30 pt-4">
                         <p className="text-primary font-semibold">

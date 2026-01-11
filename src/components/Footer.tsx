@@ -19,7 +19,7 @@ const Footer = () => {
                 Award-winning film production house specializing in luxury commercials, feature films, web series, and premium content for global brands.
               </p>
               <p className="text-sm text-foreground-muted mt-4 italic">
-                "There's no creative problem that can't be solved over countless cups of chai and coffee."
+                There's no creative problem that can't be solved over countless cups of chai and coffee.
               </p>
             </div>
             <div className="flex items-center text-sm text-foreground-muted">
@@ -130,7 +130,7 @@ const Footer = () => {
         <div className="border-t border-border/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-foreground-muted">
-              © 2024 Never Ending Films. All rights reserved.
+              © 2021 Never Ending Films. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link to="/privacy-policy" className="text-sm text-foreground-muted hover:text-primary transition-colors">
