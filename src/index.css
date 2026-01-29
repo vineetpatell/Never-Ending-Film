@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Never Ending Films - Cinematic Design System */
+
+@layer base {
+  :root {
+    /* Core Cinema Colors */
+    --background: 220 13% 8%;
+    --background-secondary: 220 13% 12%;
+    --foreground: 0 0% 95%;
+    --foreground-muted: 0 0% 75%;
+
+    /* Card System */
+    --card: 220 13% 10%;
+    --card-foreground: 0 0% 95%;
+    --card-border: 0 0% 20%;
+
+    /* Glass Morphism */
+    --glass: 220 13% 15%;
+    --glass-border: 0 0% 25%;
+
+    /* Never Ending Films Brand Colors */
+    --brand-red: 0 85% 55%;        /* Softer red - eye-catching */
+    --brand-neon: 0 90% 60%;       /* Vibrant but balanced */
+    --brand-glow: 0 85% 65%;       /* Soft glow red */
+    --brand-shadow: 0 80% 35%;     /* Dark red shadow */
+
+    /* Primary System */
+    --primary: 0 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 85% 65%;
+
+    /* Secondary System */
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 0 0% 90%;
+
+    /* Muted System */
+    --muted: 220 13% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Accent System */
+    --accent: 220 13% 18%;
+    --accent-foreground: 0 0% 95%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 95%;
+
+    /* Borders & Inputs */
+    --border: 0 0% 20%;
+    --input: 220 13% 12%;
+    --ring: 0 84% 60%;
+
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(0 85% 55%), hsl(0 90% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 13% 6%) 0%, hsl(220 13% 10%) 50%, hsl(0 85% 55% / 0.08) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(0 85% 65% / 0.4) 0%, transparent 70%);
+    --gradient-glass: linear-gradient(135deg, hsla(220 13% 15% / 0.3), hsla(220 13% 25% / 0.1));
+
+    /* Shadows & Glows */
+    --shadow-brand: 0 0 50px hsl(0 85% 65% / 0.5);
+    --shadow-logo: 0 0 70px hsl(0 85% 55% / 0.7);
+    --shadow-glass: 0 8px 32px hsla(220 13% 8% / 0.4);
+    --glow-brand: 0 0 40px hsl(0 85% 65% / 0.9);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--gradient-hero);
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Background logo removed */
+
+  #root {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@layer components {
+  /* Cinematic Button Variants */
+  .btn-cinema {
+    @apply text-primary-foreground font-semibold;
+    @apply transition-all duration-500 ease-out;
+    @apply shadow-lg hover:shadow-[var(--shadow-brand)] hover:scale-105;
+    @apply border border-primary/30 hover:border-primary-glow;
+    background: var(--gradient-brand);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-cinema::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(0 85% 65% / 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .btn-cinema:hover::before {
+    left: 100%;
+  }
+
+  .btn-glass {
+    @apply bg-glass/20 backdrop-blur-xl border border-glass-border/30;
+    @apply text-foreground hover:text-foreground;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-glass/30 hover:border-glass-border/50;
+    @apply hover:shadow-[var(--shadow-glass)];
+  }
+
+  .btn-outline-cinema {
+    @apply bg-transparent border-2 border-primary text-primary;
+    @apply hover:bg-primary hover:text-primary-foreground;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:shadow-[var(--glow-red)] hover:scale-105;
+  }
+
+  /* Glass Morphism Effects */
+  .glass-panel {
+    @apply bg-glass/20 backdrop-blur-xl border border-glass-border/30;
+    @apply shadow-[var(--shadow-glass)] transition-all duration-300 ease-out;
+  }
+
+  .glass-panel:hover {
+    border-color: hsl(0 85% 55% / 0.6);
+    box-shadow: 0 0 25px hsl(0 85% 55% / 0.4), 0 0 50px hsl(0 85% 55% / 0.15);
+    transform: scale(1.02);
+  }
+
+  .glass-nav {
+    @apply bg-glass/10 backdrop-blur-2xl border-b border-glass-border/20;
+    @apply shadow-[var(--shadow-glass)];
+  }
+
+  /* Cinema Card */
+  .cinema-card {
+    @apply bg-card border border-card-border;
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .cinema-card:hover {
+    border-color: hsl(0 85% 55% / 0.6);
+    box-shadow: 0 0 25px hsl(0 85% 55% / 0.4), 0 0 50px hsl(0 85% 55% / 0.15);
+    transform: scale(1.05);
+  }
+
+  /* Text Glow Effect */
+  .text-glow {
+    /* Glow effect removed */
+  }
+
+  /* Logo Glow Animation */
+  .logo-glow {
+    filter: drop-shadow(0 0 25px hsl(0 85% 65% / 0.7)) 
+            drop-shadow(0 0 50px hsl(0 85% 55% / 0.5))
+            drop-shadow(0 0 100px hsl(0 85% 55% / 0.25));
+    animation: logo-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes logo-pulse {
+    0%, 100% { 
+      filter: drop-shadow(0 0 25px hsl(0 85% 65% / 0.7)) 
+              drop-shadow(0 0 50px hsl(0 85% 55% / 0.5))
+              drop-shadow(0 0 100px hsl(0 85% 55% / 0.25));
+    }
+    50% { 
+      filter: drop-shadow(0 0 35px hsl(0 85% 65% / 0.9)) 
+              drop-shadow(0 0 70px hsl(0 85% 55% / 0.7))
+              drop-shadow(0 0 140px hsl(0 85% 55% / 0.4));
+    }
+  }
+
+  /* Professional Tagline Font */
+  .tagline-font {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+  }
+
+  /* Typewriter Effect */
+  .typewriter-text {
+    overflow: hidden;
+    border-right: 2px solid hsl(0 85% 65%);
+    white-space: nowrap;
+    animation: typing 4s steps(60, end), blink-caret 1s step-end infinite;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.02em;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: hsl(0 85% 65%) }
+  }
+
+
+  /* Film Grain Overlay */
+  .film-grain::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle, transparent 20%, rgba(255,255,255,0.01) 21%, rgba(255,255,255,0.01) 34%, transparent 35%, transparent),
+      linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.01) 25%, rgba(255,255,255,0.01) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.01) 75%, rgba(255,255,255,0.01) 76%, transparent 77%, transparent);
+    background-size: 15px 15px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Line Clamp Utilities */
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  /* Typewriter Animation */
+  .typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite 4s;
+    width: 0;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: hsl(var(--primary)) }
+  }
+
+  /* Moving BTS Carousel Animation */
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left 15s linear infinite;
+  }
+
+  .animate-scroll-left:hover {
+    animation-play-state: paused;
+  }
+}
